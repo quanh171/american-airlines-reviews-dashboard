@@ -1,0 +1,47 @@
+aircraft_id,aircraft_model,aircraft_manufacturer,seat_capacity
+1,A318,Airbus,132
+2,A319,Airbus,134
+3,A320,Airbus,180
+4,A321,Airbus,220
+5,A322,Airbus,244
+6,A329,Airbus,160
+19,Boeing 737,Boeing,189
+20,Boeing 738,Null,Null
+21,Boeing 739,Null,Null
+22,Boeing 744,Boeing,416
+23,Boeing 747,Boeing,467
+7,A330,Airbus,277
+8,A340,Airbus,295
+9,A350,Airbus,300
+10,A380,Airbus,555
+11,BOEING 737,Null,Null
+12,BOEING 777,Null,Null
+36,Boeing 789,Boeing,296
+37,Boeing 797,Null,Null
+38,Embraer 170,Embraer,76
+39,Embraer 190,Embraer,98
+40,Embraer 195,Embraer,120
+13,BOEING 787,Null,Null
+14,Boeing 700,Null,Null
+15,Boeing 707,Null,Null
+16,Boeing 717,Null,Null
+17,Boeing 727,Null,Null
+18,Boeing 736,Null,Null
+29,Boeing 770,Null,Null
+30,Boeing 772,Null,Null
+31,Boeing 773,Null,Null
+32,Boeing 777,Boeing,396
+33,Boeing 778,Null,Null
+34,Boeing 787,Boeing,242
+35,Boeing 788,Null,Null
+41,Saab 2000,Saab,50
+42,Unknown,Unknown,Null
+43,boeing 737,Null,Null
+44,boeing 767,Null,Null
+45,boeing 777,Null,Null
+46,boeing 787,Null,Null
+24,Boeing 748,Null,Null
+25,Boeing 753,Null,Null
+26,Boeing 757,Boeing,200
+27,Boeing 763,Null,Null
+28,Boeing 767,Boeing,216
