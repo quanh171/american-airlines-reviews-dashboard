@@ -1,38 +1,93 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>American Airlines Reviews Dashboard</title>
-    <style>
-      body { margin: 0; }
-      .tableauPlaceholder { position: relative; width: 100%; }
-      .tableauViz { display: none; }
-    </style>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>American Airlines Reviews Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #003366;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+    main {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .description {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.1em;
+    }
+    .tableauPlaceholder {
+      position: relative;
+      width: 100%;
+      min-height: 600px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      padding: 20px;
+      margin-top: 20px;
+      border-top: 1px solid #ddd;
+    }
+    footer a {
+      color: #003366;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>American Airlines Reviews Dashboard</h1>
+  </header>
+
+  <main>
+    <p class="description">
+      This interactive Tableau dashboard explores passenger feedback for American Airlines.
+      It highlights customer demographics, service ratings, and satisfaction drivers to uncover
+      opportunities for improving the travel experience.
+    </p>
+
+    <!-- Tableau Embed -->
     <div class='tableauPlaceholder' id='viz1758021081500'>
       <noscript>
         <a href='#'>
           <img alt='American Airlines Review Analysis'
                src='https://public.tableau.com/static/images/Am/AmericanAirlinesReviewAnalysis/Dashboard1/1.png'
-               style='border:none' />
+               style='border:none'/>
         </a>
       </noscript>
-      <object class='tableauViz'>
-        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-        <param name='embed_code_version' value='3' />
-        <param name='site_root' value='' />
-        <param name='name' value='AmericanAirlinesReviewAnalysis/Dashboard1' />
-        <param name='tabs' value='no' />
-        <param name='toolbar' value='yes' />
-        <param name='static_image' value='https://public.tableau.com/static/images/Am/AmericanAirlinesReviewAnalysis/Dashboard1/1.png' />
-        <param name='animate_transition' value='yes' />
-        <param name='display_static_image' value='yes' />
-        <param name='display_spinner' value='yes' />
-        <param name='display_overlay' value='yes' />
-        <param name='display_count' value='yes' />
-        <param name='language' value='en-US' />
-        <param name='filter' value='publish=yes' />
+      <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
+        <param name='embed_code_version' value='3'/>
+        <param name='site_root' value=''/>
+        <param name='name' value='AmericanAirlinesReviewAnalysis/Dashboard1'/>
+        <param name='tabs' value='no'/>
+        <param name='toolbar' value='yes'/>
+        <param name='static_image' value='https://public.tableau.com/static/images/Am/AmericanAirlinesReviewAnalysis/Dashboard1/1.png'/>
+        <param name='animate_transition' value='yes'/>
+        <param name='display_static_image' value='yes'/>
+        <param name='display_spinner' value='yes'/>
+        <param name='display_overlay' value='yes'/>
+        <param name='display_count' value='yes'/>
+        <param name='language' value='en-US'/>
+        <param name='filter' value='publish=yes'/>
       </object>
     </div>
     <script type='text/javascript'>
@@ -48,5 +103,14 @@
       scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
       vizElement.parentNode.insertBefore(scriptElement, vizElement);
     </script>
-  </body>
+  </main>
+
+  <footer>
+    <p>View the source on 
+      <a href="https://github.com/quanh171/american-airlines-reviews-dashboard" target="_blank">
+        GitHub
+      </a>
+    </p>
+  </footer>
+</body>
 </html>
