@@ -4,47 +4,25 @@
   <meta charset="utf-8">
   <title>American Airlines Reviews Analysis</title>
   <style>
+    :root { --page-bg: #f9f9f9; --ink: #333; --brand: #003366; }
+    * { box-sizing: border-box; }
     body {
-      margin: 0;
+      margin: 0; background: var(--page-bg); color: var(--ink);
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
     }
     header {
-      background: #003366;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
+      background: var(--brand); color: #fff; padding: 16px 20px; text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 1.8em;
-    }
-    main {
-      padding: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .tableauPlaceholder {
-      position: relative;
-      width: 100%;
-      min-height: 600px;
-    }
+    header h1 { margin: 0; font-size: 1.8em; }
+    main { padding: 0; margin: 0; }
+    /* The container spans full width; height will be set via JS */
+    .tableauPlaceholder { position: relative; width: 100%; }
     footer {
-      text-align: center;
-      font-size: 0.9em;
-      color: #555;
-      padding: 20px;
-      margin-top: 20px;
-      border-top: 1px solid #ddd;
+      text-align: center; font-size: 0.9em; color: #555;
+      padding: 14px 20px; border-top: 1px solid #ddd; background: #fff;
     }
-    footer a {
-      color: #003366;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
+    footer a { color: var(--brand); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -53,52 +31,57 @@
   </header>
 
   <main>
-    <!-- Tableau Embed (new code) -->
-    <div class='tableauPlaceholder' id='viz1758081510005' style='position: relative'>
+    <!-- Tableau Embed -->
+    <div class="tableauPlaceholder" id="viz1758081510005">
       <noscript>
-        <a href='#'>
-          <img alt='American Airlines Review Analysis'
-               src='https://public.tableau.com/static/images/Am/AmericanAirlinesReviewAnalysis/Dashboard1/1.png'
-               style='border: none'/>
+        <a href="#">
+          <img alt="American Airlines Review Analysis"
+               src="https://public.tableau.com/static/images/Am/AmericanAirlinesReviewAnalysis/Dashboard1/1.png"
+               style="border:none" />
         </a>
       </noscript>
-      <object class='tableauViz' style='display:none;'>
-        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
-        <param name='embed_code_version' value='3'/>
-        <param name='site_root' value=''/>
-        <param name='name' value='AmericanAirlinesReviewAnalysis/Dashboard1'/>
-        <param name='tabs' value='no'/>
-        <param name='toolbar' value='yes'/>
-        <param name='static_image' value='https://public.tableau.com/static/images/Am/AmericanAirlinesReviewAnalysis/Dashboard1/1.png'/>
-        <param name='animate_transition' value='yes'/>
-        <param name='display_static_image' value='yes'/>
-        <param name='display_spinner' value='yes'/>
-        <param name='display_overlay' value='yes'/>
-        <param name='display_count' value='yes'/>
-        <param name='language' value='en-US'/>
+      <object class="tableauViz" style="display:none;">
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+        <param name="embed_code_version" value="3" />
+        <param name="site_root" value="" />
+        <param name="name" value="AmericanAirlinesReviewAnalysis/Dashboard1" />
+        <param name="tabs" value="no" />
+        <param name="toolbar" value="yes" />
+        <param name="static_image" value="https://public.tableau.com/static/images/Am/AmericanAirlinesReviewAnalysis/Dashboard1/1.png" />
+        <param name="animate_transition" value="yes" />
+        <param name="display_static_image" value="yes" />
+        <param name="display_spinner" value="yes" />
+        <param name="display_overlay" value="yes" />
+        <param name="display_count" value="yes" />
+        <param name="language" value="en-US" />
       </object>
     </div>
-    <script type='text/javascript'>
-      var divElement = document.getElementById('viz1758081510005');
-      var vizElement = divElement.getElementsByTagName('object')[0];
-      function sizeViz() {
-        vizElement.style.width = '100%';
-        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-      }
-      sizeViz();
-      window.addEventListener('resize', sizeViz);
-      var scriptElement = document.createElement('script');
-      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-      vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script>
   </main>
 
   <footer>
-    <p>View the source on 
-      <a href="https://github.com/quanh171/american-airlines-reviews-dashboard" target="_blank">
-        GitHub
-      </a>
+    <p>View the source on
+      <a href="https://github.com/quanh171/american-airlines-reviews-dashboard" target="_blank">GitHub</a>
     </p>
   </footer>
+
+  <script type="text/javascript">
+    // Size the viz to fill the viewport minus header + footer
+    const divElement = document.getElementById('viz1758081510005');
+    const vizElement = divElement.getElementsByTagName('object')[0];
+
+    function sizeViz() {
+      const headerH = document.querySelector('header').offsetHeight || 0;
+      const footerH = document.querySelector('footer').offsetHeight || 0;
+      const availableH = Math.max(300, window.innerHeight - headerH - footerH); // floor at 300px
+      vizElement.style.width = '100%';
+      vizElement.style.height = availableH + 'px';
+    }
+    sizeViz();
+    window.addEventListener('resize', sizeViz);
+
+    const scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
 </body>
 </html>
