@@ -87,7 +87,8 @@ WHERE cabin_staff_service IS NOT NULL
   AND inflight_entertainment IS NOT NULL
   AND seat_comfort IS NOT NULL
   AND wifi_and_connectivity IS NOT NULL
-  AND value_for_money IS NOT NULL;
+  AND value_for_money IS NOT NULL
+  AND seat_type != 'Economy Class'; -- change '!=' or '=' to select eco or non-eco seats
 
 	-- create correlation matrix table
     -- 7×7 correlation matrix from fct_review
