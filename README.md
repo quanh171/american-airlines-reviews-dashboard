@@ -13,6 +13,7 @@ This project explores passenger feedback for American Airlines, highlighting wha
 - `dashboard/` → dashboard in PNG format
 - `db/` → datasets used for this project
 - `docs/` → HTML embed for GitHub Pages
+- `screenshot/` → contains screenshots used for this project
 - `sql/` → SQL for metrics finding and correlation matrix
 - `twbx/` → Tableau packaged workbook (.twbx)
 
