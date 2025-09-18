@@ -3,7 +3,7 @@
 Explore passenger feedback for American Airlines with a Tableau dashboard.
 👉 [View Live Dashboard](https://quanh171.github.io/american-airlines-reviews-dashboard/)
 
-Or have a quick look here 👉 ![Dashboard Preview](dashboard/dashboard.png)
+Or have a quick look here. 👉 [Dashboard Preview](dashboard/dashboard.png)
 
 ## 📌 Project Overview
 This project analyzes **customer reviews for American Airlines** to uncover patterns in passenger satisfaction. The goal was to identify what service factors influence customer perception, and how different traveler and seat types experience the airline.
