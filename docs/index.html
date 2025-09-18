@@ -3,37 +3,127 @@
 <head>
   <meta charset="utf-8">
   <title>American Airlines Reviews Analysis</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>html,body{margin:0;height:100%;overflow:hidden}</style>
+  <style>
+    :root { --header-h: 72px; --footer-h: 64px; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      height: var(--header-h);
+      background: #003366;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 1.6em; line-height: 1; }
+    main {
+      /* Take all remaining vertical space between header and footer */
+      min-height: calc(100vh - var(--header-h) - var(--footer-h));
+      padding: 12px 16px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .viz-wrap {
+      /* The container the viz will fill */
+      position: relative;
+      width: 100%;
+      height: calc(100vh - var(--header-h) - var(--footer-h) - 24px); /* subtract main padding */
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .tableauPlaceholder { position: absolute; inset: 0; }
+    footer {
+      height: var(--footer-h);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      padding: 0 16px;
+      border-top: 1px solid #ddd;
+    }
+    footer a { color: #003366; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
-  <div class='tableauPlaceholder' id='viz' style='position:fixed;inset:0'>
-    <noscript>
-      <a href='#'><img alt='American Airlines Review Analysis'
-        src='https://public.tableau.com/static/images/Am/AmericanAirlinesReviewAnalysis/Dashboard1/1.png'
-        style='border:0;width:100%;height:100%'/></a>
-    </noscript>
-    <object class='tableauViz' style='display:none; width:100%; height:100%;'>
-      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
-      <param name='embed_code_version' value='3'/>
-      <param name='site_root' value=''/>
-      <param name='name' value='AmericanAirlinesReviewAnalysis/Dashboard1'/>
-      <param name='tabs' value='no'/>
-      <param name='toolbar' value='yes'/>
-      <param name='static_image' value='https://public.tableau.com/static/images/Am/AmericanAirlinesReviewAnalysis/Dashboard1/1.png'/>
-      <param name='animate_transition' value='yes'/>
-      <param name='display_static_image' value='yes'/>
-      <param name='display_spinner' value='yes'/>
-      <param name='display_overlay' value='yes'/>
-      <param name='display_count' value='yes'/>
-      <param name='language' value='en-US'/>
-    </object>
-  </div>
-  <script>
-    var vizElement=document.getElementById('viz').getElementsByTagName('object')[0];
-    vizElement.style.width='100%'; vizElement.style.height='100%';
-    var s=document.createElement('script'); s.src='https://public.tableau.com/javascripts/api/viz_v1.js';
-    vizElement.parentNode.insertBefore(s, vizElement);
+  <header>
+    <h1>American Airlines Reviews Analysis</h1>
+  </header>
+
+  <main>
+    <!-- Responsive Tableau container -->
+    <div class="viz-wrap">
+      <div class='tableauPlaceholder' id='viz1758228080673'>
+        <noscript>
+          <a href='#'>
+            <img alt='American Airlines Review Analysis'
+                 src='https://public.tableau.com/static/images/AA/AA_Analysis/Dashboard1/1.png'
+                 style='border:none' />
+          </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='AA_Analysis/Dashboard1' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/AA/AA_Analysis/Dashboard1/1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+        </object>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>View the source on
+      <a href="https://github.com/quanh171/american-airlines-reviews-dashboard" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </footer>
+
+  <script type='text/javascript'>
+    // Load Tableau API
+    (function(){
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      document.body.appendChild(scriptElement);
+    })();
+
+    // Keep the viz sized to the container (prevents cut-off)
+    (function(){
+      var divElement = document.getElementById('viz1758228080673');
+      var vizElement = divElement.getElementsByTagName('object')[0];
+
+      function sizeViz() {
+        // Fill the viz-wrap (which already fits the viewport between header/footer)
+        var wrap = divElement.parentElement; // .viz-wrap
+        vizElement.style.width  = wrap.clientWidth + 'px';
+        vizElement.style.height = wrap.clientHeight + 'px';
+      }
+      sizeViz();
+
+      // Resize on container/screen changes (more reliable than window resize alone)
+      var ro = new ResizeObserver(sizeViz);
+      ro.observe(divElement.parentElement);
+      window.addEventListener('resize', sizeViz);
+    })();
   </script>
 </body>
 </html>
