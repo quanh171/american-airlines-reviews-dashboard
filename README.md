@@ -49,7 +49,7 @@ The work was done using **Excel and SQL (MySQL)** for data preparation and **Tab
 - **Low satisfaction overall**: Average rating **1.9/5**, with only **12.5% recommending**.
 - **Economy class dominates reviews (84%) but underperforms** across all metrics.
 - **Ground Service (1.7) and WiFi (1.7)** are the weakest areas.
-- **Value for Money** is most influenced by **Seat Comfort** and *Food & Beverages** (strong correlations).
+- **Value for Money** is most influenced by **Seat Comfort** and **Food & Beverages** (strong correlations).
 - **Non-Economy travelers** enjoy more consistent service experiences.
 - **Recent trend**: Recommendation rate shows slight recovery in 2024–2025.
 
