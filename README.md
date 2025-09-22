@@ -45,13 +45,24 @@ The work was done using **Excel and SQL (MySQL)** for data preparation and **Tab
 
 ---
 
-## 💡 Key Insights
-- **Overall rating is low (1.9)**, with only **12.5% recommending** the airline.
-- **Economy class dominates** reviews (~84%), but scores lowest on most factors.
-- **Ground service and WiFi & Connectivity** are weakest areas (~1.7 each).
-- **Value for money is closely tied to seat comfort and food & beverages**.
-- **Non-Economy travelers** report stronger correlations among service factors, suggesting more consistent experiences.
+## 🔍 Key Insights
+- **Low satisfaction overall**: Average rating **1.9/5**, with only **12.5% recommending**.
+- **Economy class dominates reviews (84%) but underperforms** across all metrics.
+- **Ground Service (1.7) and WiFi (1.7)** are the weakest areas.
+- **Value for Money** is most influenced by **Seat Comfort** and *Food & Beverages** (strong correlations).
+- **Non-Economy travelers** enjoy more consistent service experiences.
+- **Recent trend**: Recommendation rate shows slight recovery in 2024–2025.
 
+---
+
+## 💡 Recommendations
+- Make satisfaction **a top KPI**; set improvement targets (e.g., double recommendation rate in 2 years).
+- Focus upgrades on **seat comfort, food quality, and cleanliness** in Economy to raise overall scores.
+- Improve **boarding/check-in efficiency and WiFi reliability** (or set clearer expectations).
+- Small, visible improvements in these areas will boost **perceived value**.
+- Market premium cabins as reliable, while **closing the gap in Economy** to lift the brand overall.
+- Build momentum with **loyalty perks**, **customer guarantees**, **or service pilots**, and track progress monthly.
+  
 ---
 
 ## ✅ What Worked Well
